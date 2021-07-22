@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body, html {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: 45px;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+p {
+    font-size: 30px;
+    font-weight: 500
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.wrapper {
+    max-width: 1440px;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    background-color: #F5F5F5;
+}
+
+.header_nav_container {
+    height: 110px;
+}
+
+.header_nav {
+    position: relative;
+    padding: 36px 50px 0 50px;
+    display: flex;
+    flex-direction: row; /* Держим элементы в строке */
+    justify-content: space-between; /* Распределяем элементы внутри шапки */
+}
+
+.header_nav img {
+    width: 69px;
+    height: 37px;
+    cursor: pointer;
+}
+
+.header_nav nav {
+    display: flex;
+    margin-top: 7px;
+}
+
+.header_nav nav li {
+    list-style-type: none;
+    font-size: 25px;
+    margin-left: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.header_nav nav li:hover {
+    border-bottom: 2px solid dimgray;
+    color: dimgray;
+}
+
+.header_content {
+    height: 760px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: row; /* Держим элементы в строке */
+    justify-content: space-between; /* Распределяем элементы внутри шапки */
+}
+
+.header_content h1 {
+    font-size: 69px;
+    font-weight: 500;
+    margin: auto 0;
+}
+
+.header_content img {
+    width: 500px;
+}
+
+.projects {
+    margin: 80px;
+}
+
+.projects .slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Распределяем элементы внутри шапки */
+    margin-top: 50px;
+}
+
+.projects .slider .cart img {
+    width: 370px;
+    height: 558px;
+    border-radius: 5px;
+}
+
+.projects .slider a {
+    margin-top: 300px;
+}
+
+.content_creation {
+    margin: 100px 80px 0 80px;
+}
+
+.content_creation_wrapper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Распределяем элементы внутри шапки */
+}
+
+.content_creation_wrapper .video iframe {
+    border-radius: 5px;
+}
+
+.content_creation_wrapper .content {
+    max-width: 514px;
+}
+
+.content_creation_wrapper .content p {
+    margin-bottom: 50px;
+}
+
+.content_creation_wrapper .content a {
+    margin-top: 50px;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+.content_creation_wrapper .content a span {
+    border-bottom: 2px solid black;
+}
+
+.content_creation_wrapper .content a img {
+    margin-left: 7px;
+}
+
+.about_me {
+    margin: 100px 80px 0 80px;
+    padding-bottom: 100px;
+}
+
+.about_me .container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Распределяем элементы внутри шапки */
+}
+
+.about_me .container .content p {
+    max-width: 535px;
+}
+
+.about_me .form {
+    width: 642px;
+}
+
+.about_me .form .form_title {
+    padding-bottom: 15px;
+}
+
+.about_me .form .terms {
+    padding: 20px;
+    display: none;
+}
+
+.about_me .form .terms p {
+    font-size: 20px;
+    margin: 0;
+    width: 578px;
+}
+
+
+.about_me .form .title_wrapper {
+    cursor: pointer;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: space-between; /* Распределяем элементы внутри шапки */
+}
+
+.about_me .form .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.about_me .form .title_wrapper img {
+    margin-right: 20px;
+}
+
+.number {
+    font-weight: 600;
+    font-size: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid black;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
