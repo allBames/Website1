@@ -1,16 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
 body, html {
     font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
     font-weight: 400;
 }
 
-h2 {
-    padding-bottom: 20px;
+.block-title {
     font-weight: 500;
     font-size: 45px;
 }
@@ -20,12 +13,15 @@ hr {
 }
 
 p {
+    padding: 0;
+    margin: 0;
     font-size: 30px;
     font-weight: 500
 }
 
 h3 {
-    margin-bottom: 15px;
+    padding: 0;
+    margin: 0;
     font-weight: 500;
     font-size: 30px;
 }
@@ -34,34 +30,32 @@ h3 {
     max-width: 1440px;
     height: 100%;
     margin: auto;
-    padding: 0;
     background-color: #F5F5F5;
 }
 
-.header_nav_container {
+/*-------------HEADER---------------*/
+.header-nav-container {
     height: 110px;
 }
 
-.header_nav {
+.header-nav {
     position: relative;
-    padding: 36px 50px 0 50px;
+    padding: 36px 30px 0 30px;
     display: flex;
-    flex-direction: row; /* Держим элементы в строке */
-    justify-content: space-between; /* Распределяем элементы внутри шапки */
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.header_nav img {
-    width: 69px;
-    height: 37px;
+.logo {
     cursor: pointer;
 }
 
-.header_nav nav {
+.header-menu {
     display: flex;
     margin-top: 7px;
 }
 
-.header_nav nav li {
+.header-item {
     list-style-type: none;
     font-size: 25px;
     margin-left: 20px;
@@ -69,139 +63,143 @@ h3 {
     cursor: pointer;
 }
 
-.header_nav nav li:hover {
+.header-item:hover {
     border-bottom: 2px solid dimgray;
     color: dimgray;
 }
 
-.header_content {
+/*---------------MAIN BLOCK------------*/
+.main-block {
+    padding: 0 80px 0 80px;
     height: 760px;
-    margin-left: 80px;
     display: flex;
-    flex-direction: row; /* Держим элементы в строке */
-    justify-content: space-between; /* Распределяем элементы внутри шапки */
+    flex-direction: row;
+    align-items: center;
+    background-image: url('./assets/png-header-content.png');
+    background-position: 95%;
+    background-size: 500px;
+    background-repeat: no-repeat;
 }
 
-.header_content h1 {
+.main-block-about {
+    max-width: 773px;
     font-size: 69px;
     font-weight: 500;
-    margin: auto 0;
 }
 
-.header_content img {
-    width: 500px;
-}
-
+/*--------------PROJECTS-------------*/
 .projects {
-    margin: 80px;
+    padding: 0 80px 0 80px;
 }
 
-.projects .slider {
+.projects-carts {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Распределяем элементы внутри шапки */
-    margin-top: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
 }
 
-.projects .slider .cart img {
-    width: 370px;
-    height: 558px;
+.projects-carts .projects-open {
+    transform: translateY(38px)
+}
+
+.cart-img {
+    padding-top: 15px;
+}
+
+/*------------CONTENT CREATION------------*/
+.content-creation {
+    padding: 100px 80px 0 80px;
+}
+
+.content-wrapper {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-wrapper .youtube-player {
     border-radius: 5px;
 }
 
-.projects .slider a {
-    margin-top: 300px;
-}
-
-.content_creation {
-    margin: 100px 80px 0 80px;
-}
-
-.content_creation_wrapper {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Распределяем элементы внутри шапки */
-}
-
-.content_creation_wrapper .video iframe {
-    border-radius: 5px;
-}
-
-.content_creation_wrapper .content {
+.content-wrapper .content-text-container {
     max-width: 514px;
 }
 
-.content_creation_wrapper .content p {
-    margin-bottom: 50px;
+.content-wrapper .content-text {
+    padding-bottom: 30px;
 }
 
-.content_creation_wrapper .content a {
-    margin-top: 50px;
+.content-wrapper .link-on-about-me {
     font-size: 30px;
     color: black;
     text-decoration: none;
 }
 
-.content_creation_wrapper .content a span {
-    border-bottom: 2px solid black;
-}
-
-.content_creation_wrapper .content a img {
+.content-wrapper .link-on-about-me::after {
+    content: url("./assets/up.svg");
     margin-left: 7px;
 }
 
-.about_me {
-    margin: 100px 80px 0 80px;
-    padding-bottom: 100px;
+.content-wrapper .link-on-about-me .text {
+    border-bottom: 2px solid black;
 }
 
-.about_me .container {
-    margin-top: 50px;
+/*----------ABOUT ME----------*/
+.about-me {
+    margin: 100px 80px 0 80px;
+    padding-bottom: 100px; /*Убрать*/
+}
+
+.about-me-container {
+    padding-top: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Распределяем элементы внутри шапки */
+    justify-content: space-between;
 }
 
-.about_me .container .content p {
+.about-me-container .content .content-text {
     max-width: 535px;
 }
 
-.about_me .form {
+.about-me .offers {
     width: 642px;
 }
 
-.about_me .form .form_title {
+.about-me .offers .offers-title {
     padding-bottom: 15px;
 }
 
-.about_me .form .terms {
+.about-me .offers .text-container {
     padding: 20px;
     display: none;
 }
 
-.about_me .form .terms p {
+.about-me .offers .text-container .text {
     font-size: 20px;
     margin: 0;
     width: 578px;
 }
 
 
-.about_me .form .title_wrapper {
+.about-me .offers .offer {
     cursor: pointer;
     display: flex;
     margin-top: 20px;
     flex-direction: row;
-    justify-content: space-between; /* Распределяем элементы внутри шапки */
+    justify-content: space-between;
 }
 
-.about_me .form .title {
+.about-me .offers .offer-title {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center
 }
 
-.about_me .form .title_wrapper img {
+.about-me .offers .offer .arrow {
     margin-right: 20px;
 }
 
@@ -217,3 +215,4 @@ h3 {
     border-radius: 50%;
 }
 
+/*----------------ОТЗЫВЫ-------------*/
