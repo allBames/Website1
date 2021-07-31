@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>My projects</title>
+    <link href="normalize.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet">
 </head>
+
 <body>
-<p>Тут будет страница с проектами</p>
-<a href="index.html">Назад</a>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./assets/img/logo.svg" alt="logo">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <li class="item">
+                    <a href="index.html#projects">Work</a>
+                </li>
+                <li class="item">
+                    <a href="index.html#about-me">About</a>
+                </li>
+                <li class="item">
+                    <a href="index.html#say-hello">Contact</a>
+                </li>
+                <li class="item">
+                    <a href="index.html#recent-blogs">Other</a>
+                </li>
+            </nav>
+        </header>
+
+        <section class="slider-projects">
+            <img src="./assets/img/project1.jpg" alt="project1">
+        </section>
+
+        <section class="about-project">
+            <h1 class="h3-title">Title of Project</h1>
+            <p class="p-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Urna feugiat maecenas eu imperdiet varius nec pulvinar sem ultrices.
+                Adipiscing viverra mauris, nunc nisl sociis dui. Sagittis, curabitur libero urna interdum metus.
+            </p>
+        </section>
+
+        <section class="photos">
+            <div class="rectangle">
+                <img src="./assets/img/img1.jpg" alt="img">
+            </div>
+            <div class="square">
+                <img class="item" src="./assets/img/img2.jpg" alt="img">
+                <img class="item" src="./assets/img/img3.jpg" alt="img">
+            </div>
+
+        </section>
+
+        <section class="more-projects">
+            <h3 class="more-projects-title">More Projects</h3>
+            <div class="more-projects-wrapper">
+                <div class="more-projects-cart">
+                    <img src="./assets/img/img4.jpg" alt="img">
+                    <p class="p-text">Lorem ipsum dolor</p>
+                </div>
+                <div class="more-projects-cart">
+                    <img src="./assets/img/img5.jpg" alt="img">
+                    <p class="p-text">Lorem ipsum dolor</p>
+                </div>
+                <div class="more-projects-cart">
+                    <img src="./assets/img/img6.jpg" alt="img">
+                    <p class="p-text">Lorem ipsum dolor</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <footer>
+            <div class="logo-wrapper">
+                <img src="./assets/img/logo.svg" alt="logo">
+                <p class="copyright">© 2021 Arnau Ros, LLC. All rights reserved.</p>
+            </div>
+            <div class="icons">
+                <a class="icon" target="_blank" href="https://ru-ru.facebook.com">
+                    <img src="./assets/img/facebook.svg" alt="facebook">
+                </a>
+                <a class="icon" target="_blank" href="https://twitter.com">
+                    <img src="./assets/img/twitter.svg" alt="twitter">
+                </a>
+                <a class="icon" target="_blank" href="https://dribbble.com">
+                    <img src="./assets/img/dribbble.svg" alt="dribbble">
+                </a>
+            </div>
+        </footer>
+    </div>
 </body>
+
 </html>

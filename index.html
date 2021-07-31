@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Website1</title>
@@ -9,145 +10,318 @@
 </head>
 
 <body>
-<div class="wrapper">
-    <header>
-        <div class="header-nav-container">
-            <div class="header-nav">
-                <img class="logo" src="./assets/logo.svg" alt="logo">
-                <nav class="header-menu">
-                    <li class="header-item">Work</li>
-                    <li class="header-item">About</li>
-                    <li class="header-item">Contact</li>
-                    <li class="header-item">Other</li>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <section class="main-block">
-        <h1 class="main-block-about">I’m Arnau Ros, a graphic designer & content creator based in Barcelona.
-            <u>Available</u> for freelance & collaborations. </h1>
-    </section>
-
-    <section class="projects">
-        <h2 class="block-title">Projects</h2>
-        <hr>
-        <div class="projects-carts">
-            <div>
-                <h3>01 Example</h3>
-                <img class="cart-img" src="./assets/Rectangle1.jpg" alt="Rectangle1">
-            </div>
-            <div>
-                <h3>02 Example</h3>
-                <img  class="cart-img" src="./assets/Rectangle2.jpg" alt="Rectangle1">
-            </div>
-            <div>
-                <h3>03 Example</h3>
-                <img class="cart-img" src="./assets/Rectangle3.jpg" alt="Rectangle1">
-            </div>
-            <a class="projects-open" href="projects.html">
-                <img class="plus" src="./assets/plus.svg" alt="plus">
-            </a>
-        </div>
-    </section>
-
-    <section class="content-creation">
-        <h2 class="block-title">Content Creation</h2>
-        <hr>
-        <div class="content-wrapper">
-            <div class="content-text-container">
-                <p class="content-text">Lorem ipsum YouTube dolor sit amet, consectetur adipiscing elit.
-                    A nisi, accumsan, ornare donec risus pharetra mattis in.
-                    YouTube elit. A nisi, accumsan, ornare donec risus pharetra mattis in.
-                    YouTube elit. A nisi, accumsan, ornare donec risus pharetra mattis in.
-                </p>
-                <a class="link-on-about-me" href="#">
-                    <span class="text">Get in contact about a sponsorship</span>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./assets/img/logo.svg" alt="logo">
                 </a>
             </div>
-            <iframe class="youtube-player"
-                    width="674"
-                    height="378"
-                    src="https://www.youtube.com/embed/IInYxeFeofQ"
+            <nav class="nav-menu">
+                <li class="item">
+                    <a href="#projects">Work</a>
+                </li>
+                <li class="item">
+                    <a href="#about-me">About</a>
+                </li>
+                <li class="item">
+                    <a href="#say-hello">Contact</a>
+                </li>
+                <li class="item">
+                    <a href="#recent-blogs">Other</a>
+                </li>
+            </nav>
+        </header>
+
+        <section class="main-block section">
+            <h1 class="title-main-block">I’m Arnau Ros, a graphic designer & content creator based in Barcelona.
+                <u>Available</u> for freelance & collaborations.
+            </h1>
+        </section>
+
+        <section id="projects" class="projects section">
+            <h1 class="section-title">Projects</h1>
+            <div class="cards-wrapper">
+                <div class="card">
+                    <h3 class="h3-title">01 Example</h3>
+                    <img class="card-img" src="./assets/img/Rectangle1.jpg" alt="Rectangle1">
+                </div>
+                <div class="card">
+                    <h3 class="h3-title">02 Example</h3>
+                    <img class="card-img" src="./assets/img/Rectangle2.jpg" alt="Rectangle1">
+                </div>
+                <div class="card">
+                    <h3 class="h3-title">03 Example</h3>
+                    <img class="card-img" src="./assets/img/Rectangle3.jpg" alt="Rectangle1">
+                </div>
+                <a class="projects-open" href="projects.html">
+                    <img class="plus" src="./assets/img/plus.svg" alt="plus">
+                </a>
+            </div>
+        </section>
+
+        <section class="content-creation section">
+            <h2 class="section-title">Content Creation</h2>
+            <div class="content-wrapper">
+                <div class="content-container">
+                    <p class="p-text">Lorem ipsum YouTube dolor sit amet, consectetur adipiscing elit.
+                        A nisi, accumsan, ornare donec risus pharetra mattis in.
+                        YouTube elit. A nisi, accumsan, ornare donec risus pharetra mattis in.
+                        YouTube elit. A nisi, accumsan, ornare donec risus pharetra mattis in.
+                    </p>
+                    <div class="link-on-about-me">
+                        <a class="p-text" href="#about-me">Get in contact about a sponsorship</a>
+                    </div>
+                </div>
+                <iframe class="youtube-player" width="674" height="378" src="https://www.youtube.com/embed/IInYxeFeofQ"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
-            </iframe>
-        </div>
-    </section>
+                </iframe>
+            </div>
+        </section>
 
-    <section class="about-me">
-        <h2 class="block-title">About Me</h2>
+        <section id="about-me" class="about-me section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-me-container">
+                <div class="content">
+                    <p class="p-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu nullam augue
+                        dolor
+                        libero at in.
+                        Egestas in elit vitae tincidunt morbi egestas nec massa. Pretium,
+                        placerat quis sem gravida vel quam nisl in semper. Platea enim nunc aliquam volutpat, ut sed
+                        morbi.
+                        Sit leo aliquam at amet, eu dictumst accumsan eu, quis.
+                        Nam ac mattis adipiscing euismod arcu ac laoreet vitae at. Nibh etiam dictumst nibh ut.
+                        Vitae massa rhoncus, et massa. Diam fermentum malesuada scelerisque orci massa.
+                    </p>
+                </div>
+                <div class="offers">
+                    <h3 class="h3-title">Your one stop shop for:</h3>
+                    <span>
+                        <span class="offer js-offer">
+                            <div class="offer-title">
+                                <div class="block">
+                                    <span class="number">1</span>
+                                    <h3 class="p-text">Branding / Logo</h3>
+                                </div>
+                                <img class="arrow js-arrow" src="./assets/img/Vector.svg" alt="arrow">
+                            </div>
+                        </span>
+                        <div class="text-container js-text-container">
+                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi sed pulvinar
+                                rutrum tempor.
+                                Etiam duis massa elementum, etiam cras tristique. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Mi sed pulvinar rutrum tempor.
+                                Etiam duis massa elem Starting at € 2,450
+                            </p>
+                        </div>
+                    </span>
+                    <span>
+                        <span class="offer js-offer">
+                            <div class="offer-title">
+                                <div class="block">
+                                    <span class="number">2</span>
+                                    <h3 class="p-text">Packaging</h3>
+                                </div>
+                                <img class="arrow js-arrow" src="./assets/img/Vector.svg" alt="arrow">
+                            </div>
+                        </span>
+                        <div class="text-container js-text-container">
+                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi sed pulvinar
+                                rutrum tempor.
+                                Etiam duis massa elementum, etiam cras tristique. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Mi sed pulvinar rutrum tempor.
+                                Etiam duis massa elem Starting at € 2,450
+                            </p>
+                        </div>
+                    </span>
+                    <span>
+                        <span class="offer js-offer">
+                            <div class="offer-title">
+                                <div class="block">
+                                    <span class="number">3</span>
+                                    <h3 class="p-text">Websites</h3>
+                                </div>
+                                <img class="arrow js-arrow" src="./assets/img/Vector.svg" alt="arrow">
+                            </div>
+                        </span>
+                        <div class="text-container js-text-container">
+                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi sed pulvinar
+                                rutrum tempor.
+                                Etiam duis massa elementum, etiam cras tristique. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Mi sed pulvinar rutrum tempor.
+                                Etiam duis massa elem Starting at € 2,450
+                            </p>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">What Clients Say</h2>
+            <div class="feedback-wrapper">
+                <div class="slider">
+                    <span class="left-arrow">
+                        <img src="./assets/img/arrow.svg" alt="prev">
+                    </span>
+                    <div>
+                        <span class="feedback-text">
+                            <p class="p-text feedback">
+                                “I rehired Arnau to do some additional design work for my private label brand. Again,
+                                he was creative and efficient in bringing my ideas to fruition. Thanks Arnau”
+                            </p>
+                            <p class="p-text signature">
+                                - Ronald Weasley
+                            </p>
+                            <p class="p-text job-position">
+                                CEO
+                            </p>
+                        </span>
+                        <span class="feedback-text">
+                            <p class="p-text feedback">
+                                “Fhygtfrde jhbgtfrds juhygtfrde hgtfrdertyu hygtfrde uytrev juhygtfr ijuhytgrfedrtyu
+                                jhbgvfdfhy
+                                jnhgtfrd jhygtfrd yht5r hgf hygtfre uytrde hytrebnu!”
+                            </p>
+                            <p class="p-text signature">
+                                - Nikola Weasley
+                            </p>
+                            <p class="p-text job-position">
+                                QA
+                            </p>
+                        </span>
+                    </div>
+                    <span class="right-arrow">
+                        <img src="./assets/img/arrow.svg" alt="next">
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section id="say-hello" class="say-hello section">
+            <h2 class="section-title">Say Hello</h2>
+            <div class="say-hello-wrapper">
+                <div class="text-container">
+                    <p class="p-text">Looking to start a new project or just want to say hi? Send me an email
+                        and I’ll do my best to reply within 24 hrs!
+                    </p>
+                    <p class="p-text">If contact forms aren’t your thing... send me an email at
+                        <u>hello@arnau.design</u>
+                    </p>
+                </div>
+                <form class="form js-form">
+                    <div class="f-block">
+                        <div class="b-element">
+                            <label for="first-name">Name*</label>
+                            <input type="text" required id="first_name" placeholder="First Name">
+                        </div>
+                        <div class="b-element">
+                            <label for="last-name">&nbsp</label>
+                            <input type="text" id="last_name" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="f-block">
+                        <div class="b-element">
+                            <label for="inquiry">Inquiry*</label>
+                            <select id="inquiry" required>
+                                <option value="" disabled selected>Collab/Client</option>
+                                <option value="Collab">Collab</option>
+                                <option value="Client">Client</option>
+                            </select>
+                        </div>
+                        <div class="b-element">
+                            <label for="email">Email*</label>
+                            <input type="email" required id="email" placeholder="hello@arnau.design">
+                        </div>
+                    </div>
+                    <div class="b-element">
+                        <label for="send">Message*</label>
+                        <textarea required id="send" placeholder="Hello..."></textarea>
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="recent-blogs" class="recent-blogs section">
+            <h4 class="recent-blogs-title">Recent Blogs</h4>
+            <div class="recent-blogs-content">
+                <div class="blog">
+                    <p class="blog-title">Competition: win a N02 Recycle counter chair by Nendo for Fritz Hansen</p>
+                    <p class="blog-date">24.09.21</p>
+                    <a class="link-see-now" target="_blank"
+                        href="https://www.dezeen.com/2021/05/21/competition-win-fritz-hansen-recycle-counter-chair/">
+                        <span class="text">See Now</span>
+                    </a>
+                </div>
+                <div class="blog vertical-line">
+                    <p class="blog-title">The ULTIMATE Figma UI Kit (Tailwind-Figma)</p>
+                    <p class="blog-date">24.09.21</p>
+                    <a class="link-see-now" target="_blank" href="https://www.youtube.com/watch?v=mTAupMv-3t8">
+                        <span class="text">See Now</span>
+                    </a>
+                </div>
+                <div class="blog vertical-line">
+                    <p class="blog-title">The Pros and Cons of a Logo without scaling possibilities.</p>
+                    <p class="blog-date">24.09.21</p>
+                    <a class="link-see-now" target="_blank"
+                        href="https://www.distilagency.com/blog/buying-a-cheap-logo-pros-and-cons">
+                        <span class="text">See Now</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="zig-zag"></div>
+
+        <section id="newsletter" class="newsletter section">
+            <h4 class="newsletter-title">Join the Newsletter!</h4>
+            <div class="newsletter-content-wrapper">
+                <div class="newsletter-content">
+                    <p class="subscription">You’ll receive an email every once in a while about new products, courses,
+                        and videos!
+                    </p>
+                    <form class="form-subscription">
+                        <input type="email" required name="email" placeholder="name@example.com">
+                        <button type="submit">
+                            <img src="./assets/img/button-arrow.svg" alt="arrow">
+                        </button>
+                    </form>
+                    <p class="privacy-policy">We’ll never share your details. See our Privacy Policy</p>
+                </div>
+            </div>
+        </section>
+
         <hr>
-        <div class="about-me-container">
-            <div class="content">
-                <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu nullam augue dolor
-                    libero at in.
-                    Egestas in elit vitae tincidunt morbi egestas nec massa. Pretium,
-                    placerat quis sem gravida vel quam nisl in semper. Platea enim nunc aliquam volutpat, ut sed
-                    morbi.
-                    Sit leo aliquam at amet, eu dictumst accumsan eu, quis.
-                    Nam ac mattis adipiscing euismod arcu ac laoreet vitae at. Nibh etiam dictumst nibh ut.
-                    Vitae massa rhoncus, et massa. Diam fermentum malesuada scelerisque orci massa.
-                </p>
+
+        <footer>
+            <div class="logo-wrapper">
+                <img src="./assets/img/logo.svg" alt="logo">
+                <p class="copyright">© 2021 Arnau Ros, LLC. All rights reserved.</p>
             </div>
-            <div class="offers">
-                <h3 class="offers-title">Your one stop shop for:</h3>
-                <span>
-                    <span class="offer js-offer">
-                        <div class="offer-title">
-                            <span class="number">1</span>
-                            <h3>Branding / Logo</h3>
-                        </div>
-                        <img class="arrow js-arrow" src="./assets/Vector.svg" alt="arrow">
-                    </span>
-                    <hr>
-                    <div class="text-container js-text-container">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi sed pulvinar rutrum tempor.
-                            Etiam duis massa elementum, etiam cras tristique. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Mi sed pulvinar rutrum tempor.
-                            Etiam duis massa elem Starting at € 2,450
-                        </p>
-                    </div>
-                </span>
-                <span>
-                    <span class="offer js-offer">
-                        <div class="offer-title">
-                            <span class="number">2</span>
-                            <h3>Packaging</h3>
-                        </div>
-                        <img class="arrow js-arrow" src="./assets/Vector.svg" alt="arrow">
-                    </span>
-                    <hr>
-                    <div class="text-container js-text-container">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi sed pulvinar rutrum tempor.
-                            Etiam duis massa elementum, etiam cras tristique. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Mi sed pulvinar rutrum tempor.
-                            Etiam duis massa elem Starting at € 2,450
-                        </p>
-                    </div>
-                </span>
-                <span>
-                    <span class="offer js-offer">
-                        <div class="offer-title">
-                            <span class="number">3</span>
-                            <h3>Websites</h3>
-                        </div>
-                        <img class="arrow js-arrow" src="./assets/Vector.svg" alt="arrow">
-                    </span>
-                    <hr>
-                    <div class="text-container js-text-container">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi sed pulvinar rutrum tempor.
-                            Etiam duis massa elementum, etiam cras tristique. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Mi sed pulvinar rutrum tempor.
-                            Etiam duis massa elem Starting at € 2,450
-                        </p>
-                    </div>
-                </span>
+            <div class="icons">
+                <a class="icon" target="_blank" href="https://ru-ru.facebook.com">
+                    <img src="./assets/img/facebook.svg" alt="facebook">
+                </a>
+                <a class="icon" target="_blank" href="https://twitter.com">
+                    <img src="./assets/img/twitter.svg" alt="twitter">
+                </a>
+                <a class="icon" target="_blank" href="https://dribbble.com">
+                    <img src="./assets/img/dribbble.svg" alt="dribbble">
+                </a>
             </div>
+        </footer>
+
+        <div class="to-main js-to-mine">
+            <a href="javascript:scroll(0,0)">
+                <img src="./assets/img/arrow.svg" alt="">
+            </a>
         </div>
-    </section>
-</div>
-<script src="index.js"></script>
+
+    </div>
+    <script src="./js/index.js"></script>
 </body>
+
 </html>
