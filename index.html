@@ -11,35 +11,42 @@
 
 <body>
     <div class="wrapper">
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="./assets/img/logo.svg" alt="logo">
-                </a>
+        <header class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./assets/img/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <div class="burger-wrapper">
+                    <nav class="nav-menu dn-mobile">
+                        <li class="item">
+                            <a class="menu-link" data-goto=".projects" href="#">Work</a>
+                        </li>
+                        <li class="item">
+                            <a class="menu-link" data-goto=".about-me" href="#">About</a>
+                        </li>
+                        <li class="item">
+                            <a class="menu-link" data-goto=".say-hello" href="#">Contact</a>
+                        </li>
+                        <li class="item">
+                            <a class="menu-link" data-goto=".recent-blogs" href="#">Other</a>
+                        </li>
+                    </nav>
+                    <div class="burger js-burger dn">
+                        <span></span>
+                    </div>
+                </div>
             </div>
-            <nav class="nav-menu">
-                <li class="item">
-                    <a href="#projects">Work</a>
-                </li>
-                <li class="item">
-                    <a href="#about-me">About</a>
-                </li>
-                <li class="item">
-                    <a href="#say-hello">Contact</a>
-                </li>
-                <li class="item">
-                    <a href="#recent-blogs">Other</a>
-                </li>
-            </nav>
         </header>
 
         <section class="main-block section">
-            <h1 class="title-main-block">I’m Arnau Ros, a graphic designer & content creator based in Barcelona.
+            <h1 class="main-block-title">I’m Arnau Ros, a graphic designer & content creator based in Barcelona.
                 <u>Available</u> for freelance & collaborations.
             </h1>
         </section>
 
-        <section id="projects" class="projects section">
+        <section class="projects section">
             <h1 class="section-title">Projects</h1>
             <div class="cards-wrapper">
                 <div class="card">
@@ -81,7 +88,7 @@
             </div>
         </section>
 
-        <section id="about-me" class="about-me section">
+        <section class="about-me section">
             <h2 class="section-title">About Me</h2>
             <div class="about-me-container">
                 <div class="content">
@@ -200,7 +207,7 @@
             </div>
         </section>
 
-        <section id="say-hello" class="say-hello section">
+        <section class="say-hello section">
             <h2 class="section-title">Say Hello</h2>
             <div class="say-hello-wrapper">
                 <div class="text-container">
@@ -245,7 +252,7 @@
             </div>
         </section>
 
-        <section id="recent-blogs" class="recent-blogs section">
+        <section class="recent-blogs section">
             <h4 class="recent-blogs-title">Recent Blogs</h4>
             <div class="recent-blogs-content">
                 <div class="blog">
@@ -313,12 +320,6 @@
                 </a>
             </div>
         </footer>
-
-        <div class="to-main js-to-mine">
-            <a href="javascript:scroll(0,0)">
-                <img src="./assets/img/arrow.svg" alt="">
-            </a>
-        </div>
 
     </div>
     <script src="./js/index.js"></script>
