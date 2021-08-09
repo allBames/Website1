@@ -1,104 +1,90 @@
 /* -----------offers------------- */
-const offer = document.querySelectorAll('.js-offer')
-const text = document.querySelectorAll('.js-text-container')
-const arrow = document.querySelectorAll('.js-arrow')
+const offers = [...document.querySelectorAll('.js-offer')];
+offers.forEach(offer => {
+    let title = offer.querySelector('.offer-title'),
+        text = offer.querySelector('.js-text-container'),
+        arrow = offer.querySelector('.js-arrow');
 
-for (let i = 0; i < offer.length; i++) {
-    offer[i].addEventListener('click', function (event) {
-        text[i].style.display = (text[i].style.display === 'block') ? 'none' : 'block';
-        arrow[i].style.transform = (text[i].style.display === 'block') ? 'rotate(180deg)' : 'rotate(360deg)';
+    title.addEventListener('click', () => {
+        text.classList.toggle('dn');
+        arrow.classList.toggle('turn');
     });
-}
-
-/* /* ----------go top btn----------
-var goTopBtn = document.querySelector('.to-main');
-
-window.addEventListener('scroll', trackScroll);
-
-function trackScroll() {
-    var scrolled = window.pageYOffset;
-    var coords = document.documentElement.clientHeight - 150;
-
-    if (scrolled > coords) {
-        goTopBtn.style.display = 'block'
-    }
-
-    if (scrolled < coords) {
-        goTopBtn.style.display = 'none'
-    }
-} */
+});
 
 /* ------------slaider------------- */
 let slideIndex = 1;
-let prev = document.querySelector('.left-arrow')
-let next = document.querySelector('.right-arrow')
-let slides = document.querySelectorAll(".feedback-text");
+const prev = document.querySelector('.left-arrow');
+const next = document.querySelector('.right-arrow');
+const slides = document.querySelectorAll('.feedback-text');
 
-showSlides(slideIndex)
+showSlides(slideIndex);
 
 function showSlides(n) {
-    if (n > slides.length) {
-        slideIndex = 1
+    if (slides.length > 0) {
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        })
+
+        slides[slideIndex - 1].style.display = 'block';
     }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (let slide of slides) {
-        slide.style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
+}
+if (slides.length > 0) {
+    prev.addEventListener('click', () => {
+        showSlides(slideIndex -= 1);
+    })
+}
+if (slides.length > 0) {
+    next.addEventListener('click', () => {
+        showSlides(slideIndex += 1);
+    })
 }
 
-prev.addEventListener('click', function (event) {
-    showSlides(slideIndex -= 1);
-})
-
-next.addEventListener('click', function (event) {
-    showSlides(slideIndex += 1);
-})
-
 /* -----------feedback------------- */
-document.querySelector(".js-form").addEventListener("submit", (event) => {
-    event.preventDefault()
-    let form = document.querySelector(".js-form")
-    console.log({
-        "name": form.elements.first_name.value,
-        "lastName": form.elements.last_name.value,
-        "inquiry": form.elements.inquiry.value,
-        "email": form.elements.email.value,
-        "send": form.elements.send.value
+const jsForm = document.querySelector('.js-form');
+if (jsForm) {
+    jsForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        console.log({
+            name: jsForm.elements.first_name.value,
+            lastName: jsForm.elements.last_name.value,
+            inquiry: jsForm.elements.inquiry.value,
+            email: jsForm.elements.email.value,
+            send: jsForm.elements.send.value,
+        });
+        jsForm.reset();
     })
-    form.reset()
-})
+}
 
 /* ----------to subscribe----------- */
-document.querySelector(".form-subscription").addEventListener("submit", (event) => {
-    event.preventDefault()
-    let form = document.querySelector(".form-subscription")
-    console.log({
-        "email": form.elements.email.value,
-    })
+const formSubscription = document.querySelector('.form-subscription');
+if (formSubscription) {
+    formSubscription.addEventListener('submit', (event) => {
+        event.preventDefault();
+        console.log({
+            email: formSubscription.elements.email.value,
+        })
 
-    form.reset()
-})
+        formSubscription.reset();
+    })
+}
 
 /* ----------burger----------- */
-document.querySelector('.js-burger').addEventListener('click', function (event) {
+const burger = document.querySelector('.js-burger')
+burger.addEventListener('click', function (event) {
     const menu = document.querySelector('.nav-menu');
-    const isMenuVisible = menu.classList.contains('dn-mobile');
-
-    /* if (menu.classList.contains('dn-mobile')) {
-        menu.classList.remove('dn-mobile');
-        return;
-    }
-
-    menu.classList.add('dn-mobile'); */
-    document.querySelector('.js-burger').classList.toggle('active');
+    burger.classList.toggle('active');
     document.body.classList.toggle('lock');
     menu.classList.toggle('active');
     menu.classList.toggle('dn-mobile', !isMenuVisible);
 });
 
+/* -----------Проверка на устроиство------------ */
 const isMobile = {
     Android: function () {
         return navigator.userAgent.match(/Android/i);
@@ -131,30 +117,66 @@ if (isMobile.any()) {
     document.body.classList.add('pc');
 }
 
+/* --------------Навигация----------------- */
 const menuLinks = document.querySelectorAll('.menu-link[data-goto]');
+const menu = document.querySelector('.nav-menu');
+
 if (menuLinks.length > 0) {
     menuLinks.forEach(menuLink => {
         menuLink.addEventListener('click', onMenuLinkClick);
     });
+    const heightHeader = (document.body.classList.contains('touch')) ? (document.querySelector('.header').offsetHeight) : 0;
 
     function onMenuLinkClick(e) {
         const menuLink = e.target;
+
         if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
             const gotoBlock = document.querySelector(menuLink.dataset.goto);
-            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight;
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - heightHeader;
 
-            if (document.querySelector('.js-burger').classList.contains('active')){
-                document.querySelector('.js-burger').classList.remove('active');
+            if (burger.classList.contains('active')) {
+                burger.classList.remove('active');
                 document.body.classList.remove('lock');
-                document.querySelector('.nav-menu').classList.remove('active');
-                document.querySelector('.nav-menu').classList.remove('dn-mobile');
+                menu.classList.remove('active');
+                menu.classList.remove('dn-mobile');
             }
 
             window.scrollTo({
                 top: gotoBlockValue,
-                behavior: "smooth"
+                behavior: 'smooth'
             });
             e.preventDefault();
         }
     }
 }
+
+/* ---------Кнопка наверх-------------- */
+const scrollBtn = document.querySelector('.scroll-to-top');
+
+window.addEventListener('scroll', function () {
+    let isScroll = (window.scrollY > 500) && document.body.classList.contains('pc');
+    scrollBtn.classList.toggle('show', isScroll);
+});
+
+scrollBtn.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+/* ----------------Логотип------------ */
+document.querySelectorAll('.logo-link').forEach(logoLink => {
+    logoLink.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        if (burger.classList.contains('active')) {
+            burger.classList.remove('active');
+            document.body.classList.remove('lock');
+            menu.classList.remove('active');
+            menu.classList.remove('dn-mobile');
+        }
+    })
+})

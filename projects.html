@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, 
+    maximum-scale=1">
     <title>My projects</title>
     <link href="normalize.css" rel="stylesheet">
     <link href="index.css" rel="stylesheet">
@@ -11,33 +13,43 @@
 
 <body>
     <div class="wrapper">
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="./assets/img/logo.svg" alt="logo">
-                </a>
+        <div id="scrollToTop" class="scroll-to-top">
+            <img src="./assets/img/scrollToTop.png" alt="scroll to top">
+        </div>
+        <header class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./assets/img/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <div class="burger-wrapper">
+                    <nav class="nav-menu dn-mobile">
+                        <li class="item">
+                            <a href="./index.html#projects">Work</a>
+                        </li>
+                        <li class="item">
+                            <a href="./index.html#about">About</a>
+                        </li>
+                        <li class="item">
+                            <a href="./index.html#say-hello">Contact</a>
+                        </li>
+                        <li class="item">
+                            <a href="./index.html#recent-blogs">Other</a>
+                        </li>
+                    </nav>
+                    <div class="burger js-burger dn">
+                        <span></span>
+                    </div>
+                </div>
             </div>
-            <nav class="nav-menu">
-                <li class="item">
-                    <a href="index.html#projects">Work</a>
-                </li>
-                <li class="item">
-                    <a href="index.html#about-me">About</a>
-                </li>
-                <li class="item">
-                    <a href="index.html#say-hello">Contact</a>
-                </li>
-                <li class="item">
-                    <a href="index.html#recent-blogs">Other</a>
-                </li>
-            </nav>
         </header>
 
-        <section class="slider-projects">
+        <section class="section slider-projects">
             <img src="./assets/img/project1.jpg" alt="project1">
         </section>
 
-        <section class="about-project">
+        <section class="section about-project">
             <h1 class="h3-title">Title of Project</h1>
             <p class="p-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Urna feugiat maecenas eu imperdiet varius nec pulvinar sem ultrices.
@@ -45,7 +57,7 @@
             </p>
         </section>
 
-        <section class="photos">
+        <section class="section photos">
             <div class="rectangle">
                 <img src="./assets/img/img1.jpg" alt="img">
             </div>
@@ -56,7 +68,7 @@
 
         </section>
 
-        <section class="more-projects">
+        <section class="section more-projects">
             <h3 class="more-projects-title">More Projects</h3>
             <div class="more-projects-wrapper">
                 <div class="more-projects-cart">
@@ -78,7 +90,9 @@
 
         <footer>
             <div class="logo-wrapper">
-                <img src="./assets/img/logo.svg" alt="logo">
+                <a href="index.html">
+                    <img class="logo" src="./assets/img/logo.svg" alt="logo">
+                </a>
                 <p class="copyright">© 2021 Arnau Ros, LLC. All rights reserved.</p>
             </div>
             <div class="icons">
@@ -94,6 +108,7 @@
             </div>
         </footer>
     </div>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
